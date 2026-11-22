@@ -1,0 +1,313 @@
+/* =================================
+   ESTILOS GENERALES
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fb;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #1e3a8a;
+  font-size: 25px;
+  margin: 0 0 10px;
+}
+
+h3 {
+  color: #334155;
+  font-size: 17px;
+  margin: 0 0 20px;
+}
+
+p {
+  color: #64748b;
+}
+
+header,
+.registro form section,
+.reporte > section,
+.reporte footer {
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+header p {
+  margin: 0;
+}
+
+/* =================================
+   FORMULARIO DE REGISTRO
+================================= */
+
+.datos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+label {
+  color: #475569;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus {
+  background-color: white;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+/* =================================
+   CALIFICACIONES POR ASIGNATURA
+================================= */
+
+.materia h3 {
+  margin-bottom: 18px;
+}
+
+.notas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.notas-grid label {
+  font-size: 13px;
+}
+
+.notas-grid input {
+  text-align: center;
+}
+
+/* =================================
+   BOTÓN
+================================= */
+
+button {
+  display: block;
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* =================================
+   REPORTE ACADÉMICO
+================================= */
+
+#estudiante {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* TARJETAS DEL RESUMEN */
+
+.reporte > section.resumen {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.resumen div {
+  background-color: #e8eef7;
+  border-radius: 10px;
+  padding: 22px 12px;
+  text-align: center;
+  min-width: 0;
+}
+
+.resumen p {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.resumen small {
+  color: #64748b;
+  font-size: 13px;
+}
+
+#promedioGen {
+  color: #1e3a8a;
+}
+
+#aprobadas {
+  color: #16a34a;
+}
+
+#reprobadas {
+  color: #dc2626;
+}
+
+/* =================================
+   TABLA DE CALIFICACIONES
+================================= */
+
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 440px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #eff6ff;
+}
+
+th {
+  color: #334155;
+  font-weight: bold;
+  text-align: left;
+  padding: 14px;
+  border-bottom: 2px solid #dbeafe;
+}
+
+td {
+  color: #475569;
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: right;
+}
+
+/* ESTADOS */
+
+.aprobada {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.reprobada {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* =================================
+   PIE DEL REPORTE
+================================= */
+
+footer p {
+  margin-top: 0;
+}
+
+footer a {
+  display: inline-block;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =================================
+   DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+  body {
+    margin: 15px auto;
+    padding: 0 12px;
+  }
+
+  header,
+  .registro form section,
+  .reporte > section,
+  .reporte footer {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .datos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resumen p {
+    font-size: 23px;
+  }
+
+  .resumen small {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .reporte > section.resumen {
+    grid-template-columns: 1fr;
+  }
+}
